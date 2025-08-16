@@ -1,0 +1,146 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/*
+|--------------------------------------------------------------------------
+| Base Site URL
+|--------------------------------------------------------------------------
+|
+| Untuk domain utama: https://nipabooks.com/
+|
+*/
+$config['base_url'] = 'https://nipabooks.com/';
+
+/*
+|--------------------------------------------------------------------------
+| Index File
+|--------------------------------------------------------------------------
+|
+| Kalau kamu sudah pakai mod_rewrite (htaccess) untuk hilangkan index.php,
+| maka kosongkan saja ''.
+|
+*/
+$config['index_page'] = '';
+
+/*
+|--------------------------------------------------------------------------
+| URI PROTOCOL
+|--------------------------------------------------------------------------
+*/
+$config['uri_protocol']	= 'REQUEST_URI';
+
+/*
+|--------------------------------------------------------------------------
+| Default Language & Charset
+|--------------------------------------------------------------------------
+*/
+$config['language']	= 'english';
+$config['charset']  = 'UTF-8';
+
+/*
+|--------------------------------------------------------------------------
+| Hooks & Subclass Prefix
+|--------------------------------------------------------------------------
+*/
+$config['enable_hooks'] = FALSE;
+$config['subclass_prefix'] = 'MY_';
+
+/*
+|--------------------------------------------------------------------------
+| Composer Autoload
+|--------------------------------------------------------------------------
+*/
+$config['composer_autoload'] = FALSE;
+
+/*
+|--------------------------------------------------------------------------
+| Permitted URI Characters
+|--------------------------------------------------------------------------
+*/
+$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
+
+/*
+|--------------------------------------------------------------------------
+| Logging
+|--------------------------------------------------------------------------
+*/
+$config['log_threshold'] = 1;
+$config['log_path'] = '';
+$config['log_file_permissions'] = 0644;
+$config['log_date_format'] = 'Y-m-d H:i:s';
+
+/*
+|--------------------------------------------------------------------------
+| Encryption Key
+|--------------------------------------------------------------------------
+| WAJIB diisi supaya session & CSRF jalan aman.
+| Bisa pakai random string minimal 32 karakter.
+|
+*/
+$config['encryption_key'] = 'nipabooks_'.md5('put-something-random-here');
+
+/*
+|--------------------------------------------------------------------------
+| Session
+|--------------------------------------------------------------------------
+*/
+$config['sess_driver'] = 'files';
+$config['sess_cookie_name'] = 'ci_session';
+$config['sess_expiration'] = 7200;
+$config['sess_save_path'] = sys_get_temp_dir(); // path untuk session files
+$config['sess_match_ip'] = FALSE;
+$config['sess_time_to_update'] = 300;
+$config['sess_regenerate_destroy'] = FALSE;
+
+/*
+|--------------------------------------------------------------------------
+| Cookie
+|--------------------------------------------------------------------------
+*/
+$config['cookie_prefix']	= '';
+$config['cookie_domain']	= '.nipabooks.com'; // berlaku untuk subdomain
+$config['cookie_path']		= '/';
+$config['cookie_secure']	= TRUE;  // karena pakai HTTPS
+$config['cookie_httponly'] 	= TRUE;
+
+/*
+|--------------------------------------------------------------------------
+| CSRF Protection
+|--------------------------------------------------------------------------
+| Disarankan ON di production.
+|
+*/
+$config['csrf_protection'] = TRUE;
+$config['csrf_token_name'] = 'nipabooks_csrf';
+$config['csrf_cookie_name'] = 'nipabooks_csrf_cookie';
+$config['csrf_expire'] = 7200;
+$config['csrf_regenerate'] = TRUE;
+$config['csrf_exclude_uris'] = array();
+
+/*
+|--------------------------------------------------------------------------
+| Output Compression
+|--------------------------------------------------------------------------
+*/
+$config['compress_output'] = FALSE;
+
+/*
+|--------------------------------------------------------------------------
+| Time Reference
+|--------------------------------------------------------------------------
+*/
+$config['time_reference'] = 'local';
+
+/*
+|--------------------------------------------------------------------------
+| Rewrite PHP Short Tags
+|--------------------------------------------------------------------------
+*/
+$config['rewrite_short_tags'] = FALSE;
+
+/*
+|--------------------------------------------------------------------------
+| Reverse Proxy IPs
+|--------------------------------------------------------------------------
+*/
+$config['proxy_ips'] = '';
